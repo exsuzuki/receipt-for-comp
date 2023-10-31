@@ -1,0 +1,68 @@
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <title>領収書（企業）</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <script type="module" src="./script/main.js"></script>
+  <h1>支払計算</h1>
+  <div>
+    <select id="isRegistration">
+      <option value="true" selected hidden>インボイス？</option>
+      <option value="true">登録済み</option>
+      <option value="false">未登録</option>
+    </select>
+  </div>
+  <div>金額<input type="number" id="inputPrice">
+    <button id="btn">計算</button>
+  </div>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>本体価格:</td>
+        <td id="BasePrice"></td>
+        <td>
+          <font size="1"></font>
+        </td>
+      </tr>
+      <tr>
+        <td>調整額:</td>
+        <td id="Adjustment"></td>
+        <td>
+          <font size="1">本体額×1.96%</font>
+        </td>
+      </tr>
+      <tr>
+        <td>税抜額:</td>
+        <td id="ExcludingTAX"></td>
+        <td>
+          <font size="1">本体額-調整額</font>
+        </td>
+      </tr>
+      <tr>
+        <td>消費税:</td>
+        <td id="TAX"></td>
+        <td>
+          <font size="1">税抜額×10%</font>
+        </td>
+      </tr>
+      <tr>
+        <td>税込額:</td>
+        <td id="IncludingTAX"></td>
+        <td>
+          <font size="1">税抜額+消費税</font>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </font>
+  <br>
+  <br>
+  <canvas id="receipt" width="300" height="180"></canvas>
+</body>
+
+</html>

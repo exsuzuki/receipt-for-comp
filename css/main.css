@@ -1,0 +1,18 @@
+@charset "UTF-8";
+input {
+  text-align: right;
+  width: 100px;
+}
+table,
+td {
+  border-collapse: collapse;
+  border: 1px black solid;
+  background-color: rgba(172, 255, 47, 0.3);
+  padding: 3px 10px;
+  text-align: right;
+}
+canvas {
+  border-color: black;
+  border-style: double;
+  background-color: rgb(197, 239, 255);
+}
